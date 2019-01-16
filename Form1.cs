@@ -49,10 +49,10 @@ namespace Demo
         private void bnInit_Click(object sender, EventArgs e)
         {
             cmbIdx.Items.Clear();
-            int ret = zkfperrdef.ZKFP_ERR_OK;
-            if ((ret = zkfp2.Init()) == zkfperrdef.ZKFP_ERR_OK)
+            int ret = zkfperrdef.ZKFP_ERR_OK;        //0 表示操作成功
+            if ((ret = zkfp2.Init()) == zkfperrdef.ZKFP_ERR_OK)  //返回0表示操作成功
             {
-                int nCount = zkfp2.GetDeviceCount();
+                int nCount = zkfp2.GetDeviceCount();  //获取连接设备的数目
                 if (nCount > 0)
                 {
                     for (int i = 0; i < nCount; i++)
@@ -66,7 +66,7 @@ namespace Demo
                 }
                 else
                 {
-                    zkfp2.Terminate();
+                    zkfp2.Terminate();         //释放库资源，0成功，其他失败
                     MessageBox.Show("No device connected!");
                 }
             }
