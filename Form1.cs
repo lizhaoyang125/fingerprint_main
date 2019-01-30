@@ -26,7 +26,7 @@ namespace Demo
         int RegisterCount = 0;
         const int REGISTER_FINGER_COUNT = 3;
 
-        byte[][] RegTmps = new byte[3][];
+        byte[][] RegTmps = new byte[3][]; 
         byte[] RegTmp = new byte[2048];
         byte[] CapTmp = new byte[2048];
         int cbCapTmp = 2048;
@@ -57,9 +57,9 @@ namespace Demo
                 {
                     for (int i = 0; i < nCount; i++)
                     {
-                        cmbIdx.Items.Add(i.ToString());
+                        cmbIdx.Items.Add(i.ToString()); //添加连接设备的 ID
                     }
-                    cmbIdx.SelectedIndex = 0;
+                    cmbIdx.SelectedIndex = 0;           //默认设备的ID为0
                     bnInit.Enabled = false;
                     bnFree.Enabled = true;
                     bnOpen.Enabled = true;
@@ -92,12 +92,12 @@ namespace Demo
         private void bnOpen_Click(object sender, EventArgs e)
         {
             int ret = zkfp.ZKFP_ERR_OK;
-            if (IntPtr.Zero == (mDevHandle = zkfp2.OpenDevice(cmbIdx.SelectedIndex)))
+            if (IntPtr.Zero == (mDevHandle = zkfp2.OpenDevice(cmbIdx.SelectedIndex))) //连接设备
             {
                 MessageBox.Show("OpenDevice fail");
                 return;
             }
-            if (IntPtr.Zero == (mDBHandle = zkfp2.DBInit()))
+            if (IntPtr.Zero == (mDBHandle = zkfp2.DBInit())) //初始算法库
             {
                 MessageBox.Show("Init DB fail");
                 zkfp2.CloseDevice(mDevHandle);
@@ -119,16 +119,16 @@ namespace Demo
             iFid = 1;
             for (int i = 0; i < 3; i++)
             {
-                RegTmps[i] = new byte[2048];
+                RegTmps[i] = new byte[2048];    
             }
             byte[] paramValue = new byte[4];
             int size = 4;
-            zkfp2.GetParameters(mDevHandle, 1, paramValue, ref size);
-            zkfp2.ByteArray2Int(paramValue, ref mfpWidth);
+            zkfp2.GetParameters(mDevHandle, 1, paramValue, ref size); //获取参数
+            zkfp2.ByteArray2Int(paramValue, ref mfpWidth);   //4字节byte 转int
 
             size = 4;
-            zkfp2.GetParameters(mDevHandle, 2, paramValue, ref size);
-            zkfp2.ByteArray2Int(paramValue, ref mfpHeight);
+            zkfp2.GetParameters(mDevHandle, 2, paramValue, ref size);//获取参数
+            zkfp2.ByteArray2Int(paramValue, ref mfpHeight); // 4字节byte 转int
 
             FPBuffer = new byte[mfpWidth*mfpHeight];
 
@@ -146,7 +146,7 @@ namespace Demo
             while (!bIsTimeToDie)
             {
                 cbCapTmp = 2048;
-                int ret = zkfp2.AcquireFingerprint(mDevHandle, FPBuffer, CapTmp, ref cbCapTmp);
+                int ret = zkfp2.AcquireFingerprint(mDevHandle, FPBuffer, CapTmp, ref cbCapTmp);//实施检测有没有手指接触
                 if (ret == zkfp.ZKFP_ERR_OK)
                 {
                     SendMessage(FormHandle, MESSAGE_CAPTURED_OK, IntPtr.Zero, IntPtr.Zero);
@@ -159,7 +159,7 @@ namespace Demo
         {
             switch (m.Msg)
             {
-                case MESSAGE_CAPTURED_OK:
+                case MESSAGE_CAPTURED_OK:                //如果有手指接触
                     {
                         MemoryStream ms = new MemoryStream();
                         BitmapFormat.GetBitmap(FPBuffer, mfpWidth, mfpHeight, ref ms);

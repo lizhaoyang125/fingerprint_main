@@ -40,3 +40,15 @@ D:\Project\fingerprint_main\obj\x86\Debug\Demo2.csproj.CoreCompileInputs.cache
 D:\Project\fingerprint_main\obj\x86\Debug\Demo2.csproj.CopyComplete
 D:\Project\fingerprint_main\obj\x86\Debug\Demo.exe
 D:\Project\fingerprint_main\obj\x86\Debug\Demo.pdb
+D:\Github\fingerprint_main\obj\x86\Debug\Demo2.csprojAssemblyReference.cache
+D:\Github\fingerprint_main\obj\x86\Debug\Demo.Form1.resources
+D:\Github\fingerprint_main\obj\x86\Debug\Demo.Properties.Resources.resources
+D:\Github\fingerprint_main\obj\x86\Debug\Demo2.csproj.GenerateResource.cache
+D:\Github\fingerprint_main\obj\x86\Debug\Demo2.csproj.CoreCompileInputs.cache
+D:\Github\fingerprint_main\obj\x86\Debug\Demo2.csproj.CopyComplete
+D:\Github\fingerprint_main\obj\x86\Debug\Demo.exe
+D:\Github\fingerprint_main\obj\x86\Debug\Demo.pdb
+D:\Github\fingerprint_main\obj\x86\Debug\Demo.Form_initial.resources
+D:\Github\fingerprint_main\obj\x86\Debug\Demo.Form_register.resources
+D:\Github\fingerprint_main\obj\x86\Debug\Demo.Form_normal_card.resources
+D:\Github\fingerprint_main\obj\x86\Debug\Demo.Form_linshituo.resources

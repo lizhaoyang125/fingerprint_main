@@ -45,7 +45,7 @@
             // bnInit
             // 
             this.bnInit.Location = new System.Drawing.Point(36, 34);
-            this.bnInit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bnInit.Margin = new System.Windows.Forms.Padding(4);
             this.bnInit.Name = "bnInit";
             this.bnInit.Size = new System.Drawing.Size(100, 29);
             this.bnInit.TabIndex = 0;
@@ -57,7 +57,7 @@
             // 
             this.bnOpen.Enabled = false;
             this.bnOpen.Location = new System.Drawing.Point(36, 89);
-            this.bnOpen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bnOpen.Margin = new System.Windows.Forms.Padding(4);
             this.bnOpen.Name = "bnOpen";
             this.bnOpen.Size = new System.Drawing.Size(100, 29);
             this.bnOpen.TabIndex = 1;
@@ -69,7 +69,7 @@
             // 
             this.bnEnroll.Enabled = false;
             this.bnEnroll.Location = new System.Drawing.Point(36, 140);
-            this.bnEnroll.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bnEnroll.Margin = new System.Windows.Forms.Padding(4);
             this.bnEnroll.Name = "bnEnroll";
             this.bnEnroll.Size = new System.Drawing.Size(100, 29);
             this.bnEnroll.TabIndex = 2;
@@ -81,7 +81,7 @@
             // 
             this.bnVerify.Enabled = false;
             this.bnVerify.Location = new System.Drawing.Point(36, 189);
-            this.bnVerify.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bnVerify.Margin = new System.Windows.Forms.Padding(4);
             this.bnVerify.Name = "bnVerify";
             this.bnVerify.Size = new System.Drawing.Size(100, 29);
             this.bnVerify.TabIndex = 3;
@@ -93,7 +93,7 @@
             // 
             this.bnFree.Enabled = false;
             this.bnFree.Location = new System.Drawing.Point(173, 34);
-            this.bnFree.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bnFree.Margin = new System.Windows.Forms.Padding(4);
             this.bnFree.Name = "bnFree";
             this.bnFree.Size = new System.Drawing.Size(100, 29);
             this.bnFree.TabIndex = 4;
@@ -105,7 +105,7 @@
             // 
             this.bnClose.Enabled = false;
             this.bnClose.Location = new System.Drawing.Point(173, 89);
-            this.bnClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bnClose.Margin = new System.Windows.Forms.Padding(4);
             this.bnClose.Name = "bnClose";
             this.bnClose.Size = new System.Drawing.Size(100, 29);
             this.bnClose.TabIndex = 5;
@@ -117,7 +117,7 @@
             // 
             this.bnIdentify.Enabled = false;
             this.bnIdentify.Location = new System.Drawing.Point(173, 140);
-            this.bnIdentify.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bnIdentify.Margin = new System.Windows.Forms.Padding(4);
             this.bnIdentify.Name = "bnIdentify";
             this.bnIdentify.Size = new System.Drawing.Size(100, 29);
             this.bnIdentify.TabIndex = 6;
@@ -128,7 +128,7 @@
             // textRes
             // 
             this.textRes.Location = new System.Drawing.Point(13, 256);
-            this.textRes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textRes.Margin = new System.Windows.Forms.Padding(4);
             this.textRes.Multiline = true;
             this.textRes.Name = "textRes";
             this.textRes.ReadOnly = true;
@@ -137,8 +137,8 @@
             // 
             // picFPImg
             // 
-            this.picFPImg.Location = new System.Drawing.Point(413, 15);
-            this.picFPImg.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picFPImg.Location = new System.Drawing.Point(438, 34);
+            this.picFPImg.Margin = new System.Windows.Forms.Padding(4);
             this.picFPImg.Name = "picFPImg";
             this.picFPImg.Size = new System.Drawing.Size(175, 201);
             this.picFPImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -159,7 +159,7 @@
             // 
             this.cmbIdx.FormattingEnabled = true;
             this.cmbIdx.Location = new System.Drawing.Point(331, 36);
-            this.cmbIdx.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbIdx.Margin = new System.Windows.Forms.Padding(4);
             this.cmbIdx.Name = "cmbIdx";
             this.cmbIdx.Size = new System.Drawing.Size(52, 23);
             this.cmbIdx.TabIndex = 10;
@@ -180,7 +180,7 @@
             this.Controls.Add(this.bnEnroll);
             this.Controls.Add(this.bnOpen);
             this.Controls.Add(this.bnInit);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
